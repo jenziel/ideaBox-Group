@@ -1,3 +1,35 @@
+:root {
+    --dark-purple: #1F1F3C;
+    --medium-purple: #A8AAD2;
+    --light-purple: #EAEAF4;
+    --white: #FFFFFF;
+}
+
+nav {
+    background-color: var(--dark-purple);
+    width: 23vw;
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+}
+
+h1 {
+    color: var(--light-purple);
+    font-size: 3.5em;
+    font-weight: 800;
+    margin-top:10px;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
