@@ -15,16 +15,26 @@
         <h1>IdeaBox</h1>
     </nav>
     <main>
-        <section>
+        <section class="topPane">
             <form>
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title">
-                <label for="body">Body:</label>
-                <input type="text" id="body" name="body">
-                <button>Save</button>
+                <div class="inputContainer">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="inputContainer">
+                    <label for="body" id="bodyLabel">Body</label>
+                    <textarea id="body" name="body" rows="2" cols="40" maxlength="200"></textarea>
+                </div>
+                <div class="inputContainer">
+                    <button>Save</button>
+                </div>
+            
+                
             </form>
         </section>
-        <section></section>
+        <section class="lowerPane">
+
+        </section>
     </main>
 </body>
 <script type="text/javascript" src="main.js"></script>
