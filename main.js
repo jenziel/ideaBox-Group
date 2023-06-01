@@ -36,6 +36,7 @@ function addToAllIdeas(idea) {
 function createCard(idea) {
   var cardContainer = document.createElement('div');
   cardContainer.classList.add('card')
+  cardContainer.id = idea.id;
 
   var title = document.createElement('h3');
   title.classList.add('cardTitle');
