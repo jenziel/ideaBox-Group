@@ -3,32 +3,32 @@ var saveButton = document.querySelector(".saveBtn");
 var titleInput = document.querySelector("#title");
 var bodyInput = document.querySelector("#body");
 
-var testZone = document.querySelector("p")
+
 
 
 
 // eventListeners
-saveButton.addEventListener('click', function() {
-  // addNewIdea(titleInput.value, bodyInput.value)
-  helperFunction()
+saveButton.addEventListener('click', function(event) {
+  event.preventDefault()
+  var idea = createNewIdea(titleInput.value, bodyInput.value)
+  addToAllIdeas(idea)
 })
 
 
 // global variables
+var allIdeas = [];
 var savedIdeas = [];
 
 
 // functions
-// function addNewIdea(title, body) {
-// var idea = {
-//   title: title,
-//   body: body,
-//   id: Date.now()
-//   }
-//   savedIdeas.push(idea)
-//   console.log(idea)
-// }
+function createNewIdea(title, body) {
+  return {
+    title: title,
+    body: body,
+    id: Date.now()
+  }
+}
 
-function helperFunction() {
-  testZone.innerText = bodyInput.value
+function addToAllIdeas(idea) {
+  allIdeas.push(idea)
 }
