@@ -2,10 +2,7 @@
 var saveButton = document.querySelector(".saveBtn");
 var titleInput = document.querySelector("#title");
 var bodyInput = document.querySelector("#body");
-
-
-
-
+var lowerPane = document.querySelector(".lowerPane");
 
 // eventListeners
 saveButton.addEventListener('click', function(event) {
@@ -32,3 +29,24 @@ function createNewIdea(title, body) {
 function addToAllIdeas(idea) {
   allIdeas.push(idea)
 }
+
+function createCard(idea) {
+  var cardContainer = document.createElement('div');
+  cardContainer.classList.add('card')
+
+  var title = document.createElement('h3');
+  title.innerText = idea.title;
+  cardContainer.appendChild(title);
+
+  var body = document.createElement('p');
+  body.innerText = idea.body;
+  cardContainer.appendChild(body);
+
+  lowerPane.appendChild(cardContainer);
+}
+
+createCard({
+  title: 'Title',
+  body: 'Body',
+  id: Date.now(),
+});
