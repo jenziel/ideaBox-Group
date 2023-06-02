@@ -38,6 +38,14 @@ function createCard(idea) {
   cardContainer.classList.add('card')
   cardContainer.id = idea.id;
 
+  var cardBtnContainer = document.createElement('div');
+  cardBtnContainer.classList.add('card-btn-container');
+  cardContainer.appendChild(cardBtnContainer);
+
+  var deleteBtn = document.createElement('button');
+  deleteBtn.classList.add('card-delete-btn');
+  cardBtnContainer.appendChild(deleteBtn);
+
   var title = document.createElement('h3');
   title.classList.add('cardTitle');
   title.innerText = idea.title;
