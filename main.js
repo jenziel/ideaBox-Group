@@ -1,51 +1,44 @@
 // querySelectors
 var form = document.querySelector('form');
-var titleInput = document.querySelector("#title");
-var bodyInput = document.querySelector("#body");
-var inputs = document.querySelectorAll(".input");
-var saveButton = document.querySelector(".saveBtn");
-var lowerPane = document.querySelector(".lowerPane");
+var titleInput = document.querySelector('#title');
+var bodyInput = document.querySelector('#body');
+var inputs = document.querySelectorAll('.input');
+var saveButton = document.querySelector('.saveBtn');
+var lowerPane = document.querySelector('.lowerPane');
 
 // eventListeners
-saveButton.addEventListener('click', function(event) {
-  event.preventDefault()
-  var idea = createNewIdea(titleInput.value, bodyInput.value)
+saveButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  var idea = createNewIdea(titleInput.value, bodyInput.value);
   addToAllIdeas(idea);
   renderAllIdeas();
   form.reset();
-})
+});
 
 for (var i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener("keyup", function() {
-    if (checkIfEmpty()) {
-      saveButton.removeAttribute("disabled")
-    } else {
-      saveButton.setAttribute("disabled", "")
-    }
-  }) 
+  inputs[i].addEventListener('keyup', handleInputChange);
 }
 
 // global variables
 var allIdeas = [];
 var savedIdeas = [];
 
-
 // functions
 function createNewIdea(title, body) {
   return {
     title: title,
     body: body,
-    id: Date.now()
-  }
+    id: Date.now(),
+  };
 }
 
 function addToAllIdeas(idea) {
-  allIdeas.push(idea)
+  allIdeas.push(idea);
 }
 
 function createCard(idea) {
   var cardContainer = document.createElement('div');
-  cardContainer.classList.add('card')
+  cardContainer.classList.add('card');
   cardContainer.id = idea.id;
 
   var title = document.createElement('h3');
@@ -70,7 +63,21 @@ function renderAllIdeas() {
   }
 }
 
-function checkIfEmpty() {
-  return titleInput.value !== "" && bodyInput.value !== ""
+function checkIfFilledOut() {
+  return titleInput.value !== '' && bodyInput.value !== '';
 }
 
+function updateSaveButton(isFilledOut) {
+  if (isFilledOut) {
+      saveButton.removeAttribute('disabled');
+      saveButton.classList.add('enabled');
+    } else {
+      saveButton.setAttribute('disabled', '');
+      saveButton.classList.remove('enabled');
+    }
+}
+
+function handleInputChange() {
+  var isFilledOut = checkIfFilledOut();
+  updateSaveButton(isFilledOut);
+}
