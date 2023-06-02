@@ -13,6 +13,7 @@ saveButton.addEventListener('click', function (event) {
   addToAllIdeas(idea);
   renderAllIdeas();
   form.reset();
+  saveButton.setAttribute('disabled', '');
 });
 
 for (var i = 0; i < inputs.length; i++) {
