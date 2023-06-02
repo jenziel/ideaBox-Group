@@ -15,9 +15,14 @@ saveButton.addEventListener('click', function(event) {
   form.reset();
 })
 
-for(var i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener("keypress", function() {
-    checkIfEmpty();
+for (var i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener("keyup", function() {
+    console.log(checkIfEmpty())
+    if (checkIfEmpty()) {
+      saveButton.removeAttribute("disabled")
+    } else {
+      saveButton.setAttribute("disabled", "")
+    }
   }) 
 }
 
@@ -67,5 +72,9 @@ function renderAllIdeas() {
 }
 
 function checkIfEmpty() {
-  return !titleInput.value && !bodyInput.value
+  return titleInput.value !== "" && bodyInput.value !== ""
 }
+
+// function toggleClass(element, className) {
+//   element.classList.toggle(className)
+// }
