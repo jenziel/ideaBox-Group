@@ -17,7 +17,6 @@ saveButton.addEventListener('click', function(event) {
 
 for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("keyup", function() {
-    console.log(checkIfEmpty())
     if (checkIfEmpty()) {
       saveButton.removeAttribute("disabled")
     } else {
@@ -75,6 +74,3 @@ function checkIfEmpty() {
   return titleInput.value !== "" && bodyInput.value !== ""
 }
 
-// function toggleClass(element, className) {
-//   element.classList.toggle(className)
-// }
