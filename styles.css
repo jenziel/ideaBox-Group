@@ -118,13 +118,17 @@
   }
   
   .lowerPane {
-    height: 50vh;
     background-color: var(--light-purple);
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
+    justify-content: space-around; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+  
 
   .card {
     border: solid 6px var(--dark-purple);
@@ -150,3 +154,4 @@
     font-size: 1.2em;
     text-align: center;
   }
+
