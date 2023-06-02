@@ -14,6 +14,8 @@ saveButton.addEventListener('click', function(event) {
   form.reset();
 })
 
+lowerPane.addEventListener('click', removeIdeaFromArray);
+
 
 // global variables
 var allIdeas = [];
@@ -65,5 +67,15 @@ function renderAllIdeas() {
   for (var i = 0; i < allIdeas.length; i++) {
     var card = createCard(allIdeas[i]);
     lowerPane.appendChild(card);
+  }
+}
+
+function removeIdeaFromArray(event) {
+  var card = event.target.closest('.card');
+
+  for (var i = 0; i < allIdeas.length; i++) {
+    if (allIdeas[i].id === parseInt(card.id)) {
+      allIdeas.splice(i, 1);
+    }
   }
 }
