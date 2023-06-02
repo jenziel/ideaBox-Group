@@ -40,13 +40,15 @@
   form {
     display: flex;
     flex-direction: column;
+
   }
   
   .topPane {
-    height: 50vh;
+    height:max-content;
     background-color: var(--medium-purple);
     font-size: 1.3em;
     align-items: center;
+    height: 50vh;
   }
   
   form {
@@ -119,14 +121,11 @@
   
   .lowerPane {
     background-color: var(--light-purple);
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-around; */
-    /* align-items: center; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     padding: 20px;
+    height: 50vh;
 }
   
 
