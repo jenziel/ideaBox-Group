@@ -100,10 +100,10 @@
     cursor: pointer;
   }
 
-:disabled {
-  background-color: rgb(166, 166, 166);
-  cursor: not-allowed;
-}
+  :disabled {
+    background-color: rgb(166, 166, 166);
+    cursor: not-allowed;
+  }
   
   #title {
     height: 6vh;
