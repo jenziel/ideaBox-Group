@@ -2,6 +2,7 @@
 var form = document.querySelector('form');
 var titleInput = document.querySelector("#title");
 var bodyInput = document.querySelector("#body");
+var inputs = document.querySelectorAll(".input");
 var saveButton = document.querySelector(".saveBtn");
 var lowerPane = document.querySelector(".lowerPane");
 
@@ -14,6 +15,15 @@ saveButton.addEventListener('click', function(event) {
   form.reset();
 })
 
+for (var i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener("keyup", function() {
+    if (checkIfEmpty()) {
+      saveButton.removeAttribute("disabled")
+    } else {
+      saveButton.setAttribute("disabled", "")
+    }
+  }) 
+}
 
 // global variables
 var allIdeas = [];
@@ -59,3 +69,8 @@ function renderAllIdeas() {
     lowerPane.appendChild(card);
   }
 }
+
+function checkIfEmpty() {
+  return titleInput.value !== "" && bodyInput.value !== ""
+}
+
