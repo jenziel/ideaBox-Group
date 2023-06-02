@@ -90,7 +90,7 @@
     font-size: 1.1em;
   } */
   
-  button {
+  button.saveBtn {
     background-color: var(--dark-purple);
     color: var(--light-purple);
     font-size: 4.9vh;
@@ -120,4 +120,54 @@
   .lowerPane {
     height: 50vh;
     background-color: var(--light-purple);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .card {
+    position: relative;
+    border: solid 6px var(--dark-purple);
+    background-color: var(--white);
+    height: 40vh;
+    width: 18vw;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-btn-container {
+    position: absolute;
+    top: 0;
+    background-color: var(--dark-purple);
+    width: 100%;
+
+  }
+
+  .card-delete-btn {
+    width: 60px;
+    height: 60px;
+    float: right;
+  }
+
+  .card-delete-btn {
+    background: url(./assets/delete.svg);
+    cursor: pointer;
+    border: none;
+  }
+
+  .cardTitle {
+    color: var(--dark-purple);
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .cardBody {
+    color: var(--dark-purple);
+    font-size: 1.2em;
+    text-align: center;
   }

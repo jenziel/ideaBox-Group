@@ -19,6 +19,8 @@ for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener('keyup', handleInputChange);
 }
 
+lowerPane.addEventListener('click', handleIdeaRemoval);
+
 // global variables
 var allIdeas = [];
 var savedIdeas = [];
@@ -40,6 +42,14 @@ function createCard(idea) {
   var cardContainer = document.createElement('div');
   cardContainer.classList.add('card');
   cardContainer.id = idea.id;
+
+  var cardBtnContainer = document.createElement('div');
+  cardBtnContainer.classList.add('card-btn-container');
+  cardContainer.appendChild(cardBtnContainer);
+
+  var deleteBtn = document.createElement('button');
+  deleteBtn.classList.add('card-delete-btn');
+  cardBtnContainer.appendChild(deleteBtn);
 
   var title = document.createElement('h3');
   title.classList.add('cardTitle');
@@ -80,4 +90,20 @@ function updateSaveButton(isFilledOut) {
 function handleInputChange() {
   var isFilledOut = checkIfFilledOut();
   updateSaveButton(isFilledOut);
+}
+
+
+function removeIdeaFromArray(event) {
+  var card = event.target.closest('.card');
+
+  for (var i = 0; i < allIdeas.length; i++) {
+    if (allIdeas[i].id === parseInt(card.id)) {
+      allIdeas.splice(i, 1);
+    }
+  }
+}
+
+function handleIdeaRemoval(event) {
+  removeIdeaFromArray(event);
+  renderAllIdeas();
 }
