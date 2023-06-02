@@ -120,4 +120,33 @@
   .lowerPane {
     height: 50vh;
     background-color: var(--light-purple);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .card {
+    border: solid 6px var(--dark-purple);
+    background-color: var(--white);
+    height: 40vh;
+    width: 18vw;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardTitle {
+    color: var(--dark-purple);
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .cardBody {
+    color: var(--dark-purple);
+    font-size: 1.2em;
+    text-align: center;
   }
