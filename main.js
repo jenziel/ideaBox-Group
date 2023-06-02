@@ -14,8 +14,7 @@ saveButton.addEventListener('click', function(event) {
   form.reset();
 })
 
-lowerPane.addEventListener('click', removeIdeaFromArray);
-
+lowerPane.addEventListener('click', handleIdeaRemoval);
 
 // global variables
 var allIdeas = [];
@@ -78,4 +77,9 @@ function removeIdeaFromArray(event) {
       allIdeas.splice(i, 1);
     }
   }
+}
+
+function handleIdeaRemoval(event) {
+  removeIdeaFromArray(event);
+  renderAllIdeas();
 }
