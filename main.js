@@ -20,11 +20,16 @@ for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener('keyup', handleInputChange);
 }
 
-lowerPane.addEventListener('click', handleIdeaRemoval);
+lowerPane.addEventListener('dblclick', handleIdeaRemoval);
+
+lowerPane.addEventListener('click', addToFavorites);
+// update the data model. Add the closest card to the favoritedIdeas array. 
+// update the DOM. The card that we click should turn orange. This should toggle back and forth. 
+// });
 
 // global variables
 var allIdeas = [];
-var savedIdeas = [];
+var favoritedIdeas = [];
 
 // functions
 function createNewIdea(title, body) {
@@ -51,6 +56,11 @@ function createCard(idea) {
   var deleteBtn = document.createElement('button');
   deleteBtn.classList.add('card-delete-btn');
   cardBtnContainer.appendChild(deleteBtn);
+
+  var starBtn = document.createElement('button');
+  starBtn.classList.add('star-btn');
+  cardBtnContainer.appendChild(starBtn);
+
 
   var title = document.createElement('h3');
   title.classList.add('cardTitle');
@@ -80,12 +90,12 @@ function checkIfFilledOut() {
 
 function updateSaveButton(isFilledOut) {
   if (isFilledOut) {
-      saveButton.removeAttribute('disabled');
-      saveButton.classList.add('enabled');
-    } else {
-      saveButton.setAttribute('disabled', '');
-      saveButton.classList.remove('enabled');
-    }
+    saveButton.removeAttribute('disabled');
+    saveButton.classList.add('enabled');
+  } else {
+    saveButton.setAttribute('disabled', '');
+    saveButton.classList.remove('enabled');
+  }
 }
 
 function handleInputChange() {
@@ -107,4 +117,15 @@ function removeIdeaFromArray(event) {
 function handleIdeaRemoval(event) {
   removeIdeaFromArray(event);
   renderAllIdeas();
+}
+
+
+function addToFavorites(event) {
+  event.preventDefault();
+  var card = event.target.closest('.card');
+  for (var i = 0; i < allIdeas.length; i++) {
+    if (allIdeas[i].id === parseInt(card.id)) {
+      favoritedIdeas.push(card);
+    }
+  }
 }
