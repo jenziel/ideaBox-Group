@@ -20,7 +20,9 @@ nav {
   background-color: var(--dark-purple);
   width: 30vw;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction:column;
+  align-items: center;
 }
 
 h1 {
@@ -188,4 +190,6 @@ textarea#body {
   float: left;
   border: none;
 }
-
+.orange-star-btn .star-btn {
+  background: url(./assets/star-active.svg);
+}
