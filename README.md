@@ -44,3 +44,4 @@ We became better at troubleshooting by using console.log in Dev Tools.
 - After taking the initial steps of building out HTML structure and styling the page to match the comp as a group of four, we decided it would be easier to tackle subsequent features in pairs of two. This arrangement was a positive solution to having too many cooks in the kitchen.
 - Even though we had a morning standup to review code that was written without everyone present before merging it, it was sometimes hard to understand code we hadn’t written ourselves and how it might connect to new code.
 
+
