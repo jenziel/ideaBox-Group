@@ -11,6 +11,8 @@
 - Enter the command open index.html to open the browser
 - Have fun recording your ideas!
 ### Preview of App:
+![App preview image 1](assets/App_Preview_01.png)
+![App preview image 2](assets/App_Preview_02.png)
 
 ### Context:
 - We spent 20-25 hours working on this project. We are in week four of Mod 1.
@@ -38,7 +40,6 @@ https://github.com/alto-fx
 - In addition to researching when we were stuck, we revisited the Data Model lesson to better understand the concept.
 We became better at troubleshooting by using console.log in Dev Tools. 
 - We improved at working asynchronously as a group. We established a successful workflow between different levels of experience, schedules, and timezones. 
-
 ### Challenges:
 - After taking the initial steps of building out HTML structure and styling the page to match the comp as a group of four, we decided it would be easier to tackle subsequent features in pairs of two. This arrangement was a positive solution to having too many cooks in the kitchen.
 - Even though we had a morning standup to review code that was written without everyone present before merging it, it was sometimes hard to understand code we hadn’t written ourselves and how it might connect to new code.
