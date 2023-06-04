@@ -1,67 +1,94 @@
 :root {
-  --dark-purple: #1F1F3C;
-  --medium-purple: #A8AAD2;
-  --light-purple: #EAEAF4;
-  --white: #FFFFFF;
+  --dark-purple: #1f1f3c;
+  --medium-purple: #a8aad2;
+  --light-purple: #eaeaf4;
+  --white: #ffffff;
 }
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
   height: 100vh;
 }
+
 nav {
   background-color: var(--dark-purple);
   width: 30vw;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction:column;
+  align-items: center;
 }
+
 h1 {
   color: var(--light-purple);
   font-size: 4.2em;
   font-weight: bold;
   margin-top: 14px;
 }
+
+.filter-btn {
+  border: 20px;
+  height: 60px;
+  width: 83%;
+  outline: solid 3.5px var(--dark-purple);
+  background-color: var(--medium-purple);
+  color: var(--dark-purple);
+  font-size: x-large;
+  font-weight: 550;
+  cursor: pointer;
+}
+
 main {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
+
 .topPane,
 form {
   display: flex;
   flex-direction: column;
 }
+
 .topPane {
   height: 50vh;
   background-color: var(--medium-purple);
   font-size: 1.3em;
   align-items: center;
 }
+
 form {
   height: 100%;
   justify-content: space-around;
   align-items: flex-end;
 }
+
 textarea {
   resize: none;
 }
-input[type='text'],
+
+input[type="text"],
 textarea {
   font-size: 1.3em;
   padding: 5px;
 }
+
 input,
 textarea,
 button {
   width: 53vw;
 }
+
 .inputContainer {
   margin-bottom: 10px;
 }
+
 label {
   display: inline-block;
   width: 150px;
@@ -69,6 +96,7 @@ label {
   font-size: 1.4em;
   text-align: right;
 }
+
 button.saveBtn {
   background-color: var(--dark-purple);
   color: var(--light-purple);
@@ -78,24 +106,30 @@ button.saveBtn {
   margin-bottom: 14px;
   cursor: pointer;
 }
+
 button:disabled {
   background-color: rgb(166, 166, 166);
   cursor: not-allowed;
 }
+
 #title {
   height: 6vh;
 }
+
 #title,
 #body {
   outline: solid 3.5px var(--dark-purple);
   margin-top: 0px;
 }
+
 textarea#body {
   height: 12vh;
 }
+
 #body {
   height: 8vh;
 }
+
 .lowerPane {
   background-color: var(--light-purple);
   display: grid;
@@ -104,6 +138,7 @@ textarea#body {
   padding: 20px;
   height: 50vh;
 }
+
 .card {
   position: relative;
   border: solid 6px var(--dark-purple);
@@ -115,33 +150,39 @@ textarea#body {
   flex-direction: column;
   align-items: center;
 }
+
 .card-btn-container {
   position: absolute;
   top: 0;
   background-color: var(--dark-purple);
   width: 100%;
 }
+
 .card-delete-btn {
   width: 60px;
   height: 60px;
   float: right;
 }
+
 .card-delete-btn {
   background: url(./assets/delete.svg);
   cursor: pointer;
   border: none;
 }
+
 .cardTitle {
   color: var(--dark-purple);
   font-size: 1.8em;
   text-align: center;
   font-weight: 500;
 }
+
 .cardBody {
   color: var(--dark-purple);
   font-size: 1.2em;
   text-align: center;
 }
+
 .star-btn {
   background: url(./assets/star.svg);
   width: 60px;
@@ -149,10 +190,6 @@ textarea#body {
   float: left;
   border: none;
 }
-
-
-
-
-
-
-
+.orange-star-btn .star-btn {
+  background: url(./assets/star-active.svg);
+}
