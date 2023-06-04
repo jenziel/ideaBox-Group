@@ -50,13 +50,13 @@ main {
   flex-direction: column;
 }
 
-.topPane,
+.top-pane,
 form {
   display: flex;
   flex-direction: column;
 }
 
-.topPane {
+.top-pane {
   height: 50vh;
   background-color: var(--medium-purple);
   font-size: 1.3em;
@@ -85,7 +85,7 @@ button {
   width: 53vw;
 }
 
-.inputContainer {
+.input-container {
   margin-bottom: 10px;
 }
 
@@ -97,7 +97,7 @@ label {
   text-align: right;
 }
 
-button.saveBtn {
+button.save-btn {
   background-color: var(--dark-purple);
   color: var(--light-purple);
   font-size: 4.9vh;
@@ -130,7 +130,7 @@ textarea#body {
   height: 8vh;
 }
 
-.lowerPane {
+.lower-pane {
   background-color: var(--light-purple);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -171,14 +171,14 @@ textarea#body {
   border: none;
 }
 
-.cardTitle {
+.card-title {
   color: var(--dark-purple);
   font-size: 1.8em;
   text-align: center;
   font-weight: 500;
 }
 
-.cardBody {
+.card-body {
   color: var(--dark-purple);
   font-size: 1.2em;
   text-align: center;

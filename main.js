@@ -3,8 +3,8 @@ var form = document.querySelector("form");
 var titleInput = document.querySelector("#title");
 var bodyInput = document.querySelector("#body");
 var inputs = document.querySelectorAll(".input");
-var saveButton = document.querySelector(".saveBtn");
-var lowerPane = document.querySelector(".lowerPane");
+var saveButton = document.querySelector(".save-btn");
+var lowerPane = document.querySelector(".lower-pane");
 var filterBtn = document.querySelector(".filter-btn");
 
 // eventListeners
@@ -69,12 +69,12 @@ function createCard(idea) {
   cardBtnContainer.appendChild(starBtn);
 
   var title = document.createElement("h3");
-  title.classList.add("cardTitle");
+  title.classList.add("card-title");
   title.innerText = idea.title;
   cardContainer.appendChild(title);
 
   var body = document.createElement("p");
-  body.classList.add("cardBody");
+  body.classList.add("card-body");
   body.innerText = idea.body;
   cardContainer.appendChild(body);
 
