@@ -149,6 +149,7 @@ textarea#body {
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
+  padding-top: 25px;
 }
 
 .card-btn-container {
