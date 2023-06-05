@@ -11,16 +11,19 @@
 - Enter the command open index.html to open the browser
 - Have fun recording your ideas!
 ### Preview of App:
-![App preview image 1](assets/App_Preview_01.png)
-![App preview image 2](assets/App_Preview_02.png)
+![App Preview 01](assets/App_Preview_01.png)
+![App Preview 02](assets/App_Preview_02.png)
 
 ### Context:
 - We spent 20-25 hours working on this project. We are in week four of Mod 1.
 
 ### Contributors:
 https://github.com/LDeLaRosa13
+
 https://github.com/jenziel
+
 https://github.com/JoshBennett793
+
 https://github.com/alto-fx
 
 ### Learning Goals:
