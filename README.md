@@ -11,9 +11,8 @@
 - Enter the command open index.html to open the browser
 - Have fun recording your ideas!
 ### Preview of App:
-![App Preview 01](assets/App_Preview_01.png)
-![App Preview 02](assets/App_Preview_02.png)
-
+<img width="1562" alt="App_Preview_01" src="https://user-images.githubusercontent.com/130857864/243240411-5b2f9ff9-f369-470a-a717-57383adc83ef.png">
+<img width="1563" alt="App_Preview_02" src="https://user-images.githubusercontent.com/130857864/243240426-4cd95ee5-a21f-456c-aff4-78815a43d02b.png">
 ### Context:
 - We spent 20-25 hours working on this project. We are in week four of Mod 1.
 
