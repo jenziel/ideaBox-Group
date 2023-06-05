@@ -11,9 +11,8 @@
 - Enter the command open index.html to open the browser
 - Have fun recording your ideas!
 ### Preview of App:
-![App Preview 01](../../../../Desktop/ideaBox-Group/App_Preview_01.png)
-![App Preview 02](../../../../Desktop/ideaBox-Group/App_Preview_02.png)
-
+![App preview image 01](App_Preview_01.png)
+![App preview image 02](App_Preview_02.png)
 ### Context:
 - We spent 20-25 hours working on this project. We are in week four of Mod 1.
 
